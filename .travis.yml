@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - "stable"
-before_script:
-  - npm install
+  - lts/*
+install:
+  - yarn install 
 script:
-  - npm run build  
+  - yarn docs:build 
 deploy:
   provider: heroku
   api_key:
